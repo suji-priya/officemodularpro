@@ -1,11 +1,16 @@
 package com.acloudzyn.officemodularpro.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Admin {
+	@Id
 	private int id;
 	private String designation;
 	private String firstName;
 	private String lastName;
-	private String email;
+    private String email;
 	private String mobNo;
 	private String adharCardNo;
 	private String city;
@@ -73,6 +78,7 @@ public class Admin {
 	}
 
 	public void setEmail(String email) {
+		System.out.println("email called");
 		this.email = email;
 	}
 

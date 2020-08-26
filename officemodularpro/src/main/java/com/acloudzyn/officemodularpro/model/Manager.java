@@ -1,10 +1,14 @@
 package com.acloudzyn.officemodularpro.model;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+@Entity
 public class Manager {
+	@Id
 	private int id;
 	private String designation;
 	private String firstName;
@@ -14,7 +18,7 @@ public class Manager {
 	private String adharCardNo;
 	private String city;
 	private String pincode;
-	
+
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "adminId")
 	private Admin theAdmin;
@@ -124,6 +128,5 @@ public class Manager {
 	public void setTheAdmin(Admin theAdmin) {
 		this.theAdmin = theAdmin;
 	}
-	
-	
+
 }
