@@ -38,6 +38,8 @@ public class AdminServiceimpl implements AdminService {
 
 	@Override
 	public String addManager(Manager theManager) {
+		Admin a=adminRepository.findById(theManager.getTheAdmin().getId()).get();
+		theManager.setTheAdmin(a);
 
 		managerRepository.save(theManager);
 
@@ -84,6 +86,9 @@ public class AdminServiceimpl implements AdminService {
 
 	@Override
 	public String addEmployee(Employee theEmployee) {
+		Manager m=managerRepository.findById(theEmployee.getTheManager().getId()).get();
+		theEmployee.setTheManager(m);
+		
 		employeeRepository.save(theEmployee);
 
 		return "Employee Added Successfully";
