@@ -1,0 +1,28 @@
+http://localhost:8081/manager_api/*******
+
+
+{    "id":4,
+    "designation":"manager",
+    "firstName":"gaurish",
+     "lastName":"shaha",
+    "email":"rohitmore@gmail.com",
+     "mobNo":"9423659147",
+    "adharCardNo":"2834077",
+    "city":"thane",
+    "pincode":"400002",
+   
+    
+      "theAdmin" :{
+         
+    "id":1,
+    "designation":"admin",
+    "firstName":"akash",
+     "lastName":"patil",
+    "email":"hr@acloudzyn.com",
+     "mobNo":"9022967795",
+    "adharCardNo":"12345678",
+    "city":"mumbai",
+    "pincode":425201
+      }
+
+}
