@@ -11,11 +11,4 @@ http://localhost:8081/manager_api/*******
     "city":"thane",
     "pincode":"400002",
    
-    
-      "theAdmin" :{
-         
-    "id":1
-   
-      }
-
 }

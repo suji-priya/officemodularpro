@@ -7,4 +7,6 @@ import com.acloudzyn.officemodularpro.model.Manager;
 @Repository
 public interface ManagerRepository extends JpaRepository<Manager, Integer> {
 
+	public Manager findByCity(String city);
+	
 }

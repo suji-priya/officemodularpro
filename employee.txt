@@ -10,11 +10,6 @@ localhost:8081/admin_api/employee
     "city":"thane",
     "pincode":"400002",
    
-     "theManager":{
-          "id":3,
-        "theAdmin" :{
-     
-         }
-     }
+   } 
     
      
