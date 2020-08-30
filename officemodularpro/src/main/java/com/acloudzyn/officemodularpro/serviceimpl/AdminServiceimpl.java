@@ -6,6 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import com.acloudzyn.officemodularpro.model.Admin;
@@ -38,9 +40,13 @@ public class AdminServiceimpl implements AdminService {
 
 	@Override
 	public String addManager(Manager theManager) {
-		Admin a=adminRepository.findById(1).get();
-		
-		theManager.setTheAdmin(a);
+		System.out.println("in admin service impl");
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		String currentUserName = authentication.getName();
+		System.out.println(currentUserName);
+		Admin admin=adminRepository.findByFirstName(currentUserName);
+		//Admin admin=adminRepository.findById(1).get();
+		theManager.setTheAdmin(admin);
 
 		managerRepository.save(theManager);
 
