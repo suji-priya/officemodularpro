@@ -40,6 +40,7 @@ public class AdminServiceimpl implements AdminService {
 
 	@Override
 	public String addManager(Manager theManager) {
+		System.out.println("akash");
 		System.out.println("in admin service impl");
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		String currentUserName = authentication.getName();
