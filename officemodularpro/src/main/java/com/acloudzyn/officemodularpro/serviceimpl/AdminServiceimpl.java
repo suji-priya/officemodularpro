@@ -47,6 +47,7 @@ public class AdminServiceimpl implements AdminService,UserDetailsService {
 
 	@Override
 	public String addManager(Manager theManager) {
+		System.out.println("akash");
 		System.out.println("in admin service impl");
 		String currentUserName = AuthenticationConfig.currentUser();
 		Admin admin=adminRepository.findByFirstName(currentUserName);
