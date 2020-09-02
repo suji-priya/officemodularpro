@@ -87,7 +87,7 @@ public class AdminController {
 
 	}
 
-	@GetMapping("/manager")
+	@GetMapping("/managers")
 	public ResponseEntity<Object> getManagers() {
 		List<Manager> managers = adminservice.getManagers();
 		if (managers.isEmpty()) {
