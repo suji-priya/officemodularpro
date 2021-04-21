@@ -7,5 +7,5 @@ import com.acloudzyn.officemodularpro.model.Admin;
 
 @Repository
 public interface AdminRepository extends JpaRepository<Admin, Integer> {
-
+    public Admin findByFirstName(String uname);
 }

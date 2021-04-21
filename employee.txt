@@ -1,8 +1,7 @@
-http://localhost:8081/manager_api/*******
+localhost:8081/admin_api/employee
 
-
-{    "id":4,
-    "designation":"manager",
+{    
+    "designation":"employee",
     "firstName":"gaurish",
      "lastName":"shaha",
     "email":"rohitmore@gmail.com",
@@ -11,4 +10,6 @@ http://localhost:8081/manager_api/*******
     "city":"thane",
     "pincode":"400002",
    
-}
+   } 
+    
+     
