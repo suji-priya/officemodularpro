@@ -1,0 +1,19 @@
+hello admin priya2
+http://localhost:8081/admin_api/admin
+
+
+{
+    "id":1,
+    "designation":"admin",
+    "firstName":"akash",
+     "lastName":"patil",
+    "email":"skyman.patil@gmail.com",
+     "mobNo":"9022967795",
+    "adharCardNo":"12345676",
+    "city":"bhusawal",
+    "pincode":425201
+    
+    
+      }
+
+}

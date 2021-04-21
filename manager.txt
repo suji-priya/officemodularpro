@@ -1,0 +1,14 @@
+http://localhost:8081/manager_api/*******
+
+
+{    "id":4,
+    "designation":"manager",
+    "firstName":"gaurish",
+     "lastName":"shaha",
+    "email":"rohitmore@gmail.com",
+     "mobNo":"9423659147",
+    "adharCardNo":"2834077",
+    "city":"thane",
+    "pincode":"400002",
+   
+}

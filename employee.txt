@@ -1,0 +1,15 @@
+localhost:8081/admin_api/employee
+
+{    
+    "designation":"employee",
+    "firstName":"gaurish",
+     "lastName":"shaha",
+    "email":"rohitmore@gmail.com",
+     "mobNo":"9423659147",
+    "adharCardNo":"2834077",
+    "city":"thane",
+    "pincode":"400002",
+   
+   } 
+    
+     

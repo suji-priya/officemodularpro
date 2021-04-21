@@ -1,11 +1,27 @@
 package com.acloudzyn.officemodularpro.model;
 
-public class Admin {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+@Entity
+public class Admin implements UserDetails {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String designation;
 	private String firstName;
 	private String lastName;
-	private String email;
+    private String email;
 	private String mobNo;
 	private String adharCardNo;
 	private String city;
@@ -73,6 +89,7 @@ public class Admin {
 	}
 
 	public void setEmail(String email) {
+		System.out.println("email called");
 		this.email = email;
 	}
 
@@ -106,6 +123,49 @@ public class Admin {
 
 	public void setPincode(String pincode) {
 		this.pincode = pincode;
+	}
+
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		Collection list=new ArrayList<>(Arrays.asList("write","read"));
+		
+		return list;
+	}
+
+	@Override
+	public String getPassword() {
+		System.out.println(this.getLastName());
+		return this.getLastName();
+	}
+
+	@Override
+	public String getUsername() {
+		// TODO Auto-generated method stub
+		return this.getFirstName();
+	}
+
+	@Override
+	public boolean isAccountNonExpired() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean isAccountNonLocked() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean isCredentialsNonExpired() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean isEnabled() {
+		// TODO Auto-generated method stub
+		return true;
 	}
 
 }
